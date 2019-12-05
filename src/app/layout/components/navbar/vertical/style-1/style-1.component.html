@@ -1,0 +1,42 @@
+<div class="navbar-top" [ngClass]="gdkConfig.layout.navbar.secondaryBackground">
+
+    <div class="logo">
+        <img class="logo-icon" src="assets/images/logos/logo.png">
+        <span class="logo-text secondary-text">GDK</span>
+    </div>
+
+    <div class="buttons">
+
+        <button mat-icon-button class="toggle-sidebar-folded"
+                (click)="toggleSidebarFolded()" fxHide.lt-lg>
+            <mat-icon class="secondary-text">menu</mat-icon>
+        </button>
+
+        <button mat-icon-button class="toggle-sidebar-opened"
+                (click)="toggleSidebarOpened()" fxHide.gt-md>
+            <mat-icon class="secondary-text">arrow_back</mat-icon>
+        </button>
+
+    </div>
+
+</div>
+
+
+<div class="navbar-scroll-container" [ngClass]="gdkConfig.layout.navbar.primaryBackground"
+     gdkPerfectScrollbar [gdkPerfectScrollbarOptions]="{suppressScrollX: true}">
+
+    <div class="user" *ngIf="false" fxLayout="column" [ngClass]="gdkConfig.layout.navbar.secondaryBackground">
+
+        <div class="h3 username">Charlie Adams</div>
+        <div class="h5 email hint-text mt-8">adams.charlie@mail.com</div>
+        <div class="avatar-container" [ngClass]="gdkConfig.layout.navbar.primaryBackground">
+            <img class="avatar" src="assets/images/avatars/Velazquez.jpg">
+        </div>
+
+    </div>
+
+    <div class="navbar-content">
+        <gdk-navigation class="material2" layout="vertical"></gdk-navigation>
+    </div>
+
+</div>

@@ -1,0 +1,30 @@
+@import "src/@gdk/components/countdown/countdown.theme";
+@import "src/@gdk/components/material-color-picker/material-color-picker.theme";
+@import "src/@gdk/components/search-bar/search-bar.theme";
+@import "src/@gdk/components/shortcuts/shortcuts.theme";
+@import "src/@gdk/components/sidebar/sidebar.theme";
+@import "src/@gdk/components/theme-options/theme-options.theme";
+@import "src/@gdk/components/widget/widget.theme";
+
+@mixin gdk-core-theme($theme) {
+
+    // Theming for Gdk core styles
+    @include colors-theme($theme);
+    @include cards-theme($theme);
+    @include material-theme($theme);
+    @include page-layouts-theme($theme);
+    @include typography-theme($theme);
+
+    // Theming for Gdk components
+    @include gdk-countdown-theme($theme);
+    @include gdk-search-bar-theme($theme);
+    @include gdk-shortcuts-theme($theme);
+    @include gdk-sidebar-theme($theme);
+    @include gdk-theme-options-theme($theme);
+    @include gdk-material-color-picker-theme($theme);
+    @include gdk-widget-theme($theme);
+
+    // Theming for 3rd party components
+    @include ngx-datatable-theme($theme);
+}
+

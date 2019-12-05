@@ -1,0 +1,17 @@
+@mixin gdk-countdown-theme($theme) {
+
+    $foreground: map-get($theme, foreground);
+
+    gdk-countdown {
+
+        .gdk-countdown {
+
+            .time {
+
+                .title {
+                    color: map-get($foreground, secondary-text);
+                }
+            }
+        }
+    }
+}

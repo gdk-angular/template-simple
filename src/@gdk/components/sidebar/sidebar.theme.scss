@@ -1,0 +1,16 @@
+@mixin gdk-sidebar-theme($theme) {
+
+    $background: map-get($theme, background);
+
+    gdk-sidebar {
+        background: map-get($background, background);
+    }
+
+    .gdk-sidebar-overlay {
+        background-color: rgba(0, 0, 0, 0.6);
+
+        &.gdk-sidebar-overlay-invisible {
+            background-color: transparent;
+        }
+    }
+}
